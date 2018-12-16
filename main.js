@@ -7,6 +7,7 @@
                 document.getElementById("demo").innerHTML = xhttp.responseText;
             }
         };
+        xhttp.withCredentials = true;
         xhttp.open("POST", "https://me1410.herokuapp.com/add/cookie", true);
         xhttp.send();
     }
