@@ -8,8 +8,8 @@
             }
         };
         // xhttp.withCredentials = true;
-        xhttp.setRequestHeader("withCredentials", true);
         xhttp.open("POST", "https://me1410.herokuapp.com/add/cookie", true);
+        xhttp.setRequestHeader("withCredentials", true);
         xhttp.send();
     }
 })();
