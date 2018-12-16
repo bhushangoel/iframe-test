@@ -1,10 +1,13 @@
-ui.start('#firebaseui-auth-container', {
-    signInOptions: [
-        // List of OAuth providers supported.
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-        firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-        firebase.auth.GithubAuthProvider.PROVIDER_ID
-    ],
-    // Other config options...
-});
+(() => {
+    setcookie = () => {
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+                document.getElementById("demo").innerHTML = xhttp.responseText;
+            }
+        };
+        xhttp.open("POST", "https://me1410.herokuapp.com/add/cookie", true);
+        xhttp.send();
+    }
+})();
